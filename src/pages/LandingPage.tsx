@@ -5,7 +5,7 @@ import TestimonialComponent from "../components/landing/TestimonialComponent";
 
 export default function LandingPage() {
     return (
-        <div className="min-h-screen w-full bg-black text-white">
+        <div className="min-h-screen w-full">
             <HeroSectionComponent />
             <TestimonialComponent />
             <PricingSectionComponent />

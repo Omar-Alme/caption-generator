@@ -17,6 +17,7 @@ function App() {
           <Route path="/" element={<LandingPage />} />
         </Route>
 
+        {/* Chat Page Layout */}
         <Route element={<ChatLayout />}>
           <Route path="/generator" element={<CaptionGenerator />} />
           <Route path="/favorites" element={<FavoritesPage />} />

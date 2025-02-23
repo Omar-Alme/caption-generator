@@ -6,7 +6,7 @@ export default function LandingLayout() {
     return (
         <div className="min-h-screen bg-black text-white flex flex-col">
             <Header />
-            <main className="flex-1">
+            <main className="flex-1 relative">
                 <Outlet />
             </main>
             <Footer />

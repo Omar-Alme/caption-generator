@@ -1,7 +1,15 @@
+import CtaSectionComponent from "../components/landing/CtaSectionComponent";
+import HeroSectionComponent from "../components/landing/HeroSectionComponent";
+import PricingSectionComponent from "../components/landing/PricingSectionComponent";
+import TestimonialComponent from "../components/landing/TestimonialComponent";
+
 export default function LandingPage() {
     return (
-        <div>
-            <h1 className="text-4xl font-bold text-center mt-10">Landing Page</h1>
+        <div className="min-h-screen w-full bg-black text-white">
+            <HeroSectionComponent />
+            <TestimonialComponent />
+            <PricingSectionComponent />
+            <CtaSectionComponent />
         </div>
     )
 }

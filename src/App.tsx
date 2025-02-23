@@ -1,22 +1,31 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
-import AboutPage from "./pages/AboutPage"
+import ChatLayout from "./layouts/ChatLayout"
+import LandingLayout from "./layouts/LandingLayout"
 import CaptionGenerator from "./pages/CaptionGenerator"
 import FavoritesPage from "./pages/FavoritesPage"
-import HomePage from "./pages/HomePage"
+import LandingPage from "./pages/LandingPage"
+import NotFound from "./pages/NotFound"
 
 function App() {
-  
+
 
   return (
     <BrowserRouter>
-        <div className="min-h-screen bg-gray-100">
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/generate" element={<CaptionGenerator />} />
-            <Route path="/favorites" element={<FavoritesPage />} />
-            <Route path="/about" element={<AboutPage />} />
-          </Routes>
-        </div>
+      <Routes>
+        {/* Landing Page Layout */}
+        <Route element={<LandingLayout />}>
+          <Route path="/" element={<LandingPage />} />
+        </Route>
+
+        <Route element={<ChatLayout />}>
+          <Route path="/generator" element={<CaptionGenerator />} />
+          <Route path="/favorites" element={<FavoritesPage />} />
+        </Route>
+
+        {/* Not Found */}
+        <Route path="*" element={<NotFound />} />
+
+      </Routes>
     </BrowserRouter>
   )
 }

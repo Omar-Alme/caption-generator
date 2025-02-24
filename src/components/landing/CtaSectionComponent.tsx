@@ -41,11 +41,13 @@ export default function CtaSectionComponent() {
                         />
                         <button
                             onClick={handleJoinWaitlist}
-                            className="bg-indigo-600 hover:bg-indigo-500 text-white px-6 py-3 rounded-md font-semibold shadow"
+                            className="bg-gradient-to-r cursor-pointer from-indigo-500 to-purple-600 text-white px-6 py-3 rounded-lg font-bold shadow-lg transition transform hover:scale-105 hover:from-indigo-400 hover:to-purple-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500"
                         >
                             Join Waitlist
                         </button>
-                        <button className="bg-black border border-gray-600 hover:bg-gray-700 text-white px-6 py-3 rounded-md font-semibold shadow">
+                        <button
+                            className="bg-black cursor-pointer border border-gray-600 text-white px-6 py-3 rounded-lg font-bold shadow-lg transition transform hover:bg-gray-700 hover:scale-105 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-gray-600"
+                        >
                             Try Demo
                         </button>
                     </div>

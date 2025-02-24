@@ -46,15 +46,15 @@ export default function HeroSectionComponent() {
                     {/* CTA Buttons */}
                     <div className="mt-10 flex items-center justify-center gap-x-6">
                         <a
-                            href="#Ready"
+                            href="#"
                             className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold 
-                                    text-white shadow-sm hover:bg-indigo-500 focus-visible:outline 
+                                    text-white shadow-sm hover:bg-indigo-500
                                     focus-visible:outline-2 focus-visible:outline-offset-2 
                                     focus-visible:outline-indigo-600"
                         >
                             Join Waitlist
                         </a>
-                        <Link to="/generator" className="text-sm font-semibold leading-6 text-gray-100">
+                        <Link to="/generator" className="text-sm font-semibold leading-6 text-gray-100 hover:text-indigo-400">
                             Try Demo <span aria-hidden="true">→</span>
                         </Link>
                     </div>

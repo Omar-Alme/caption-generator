@@ -119,12 +119,12 @@ export default function PricingSectionComponent() {
                             aria-describedby={tier.id}
                             className={classNames(
                                 tier.featured
-                                    ? 'bg-indigo-500 text-white shadow-sm hover:bg-indigo-400 focus-visible:outline-indigo-500'
-                                    : 'text-indigo-600 ring-1 ring-indigo-200 ring-inset hover:ring-indigo-300 focus-visible:outline-indigo-600',
-                                'mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 sm:mt-10'
+                                    ? 'bg-gradient-to-r from-indigo-500 to-purple-600 text-white shadow-lg hover:from-indigo-400 hover:to-purple-500 focus-visible:outline-none'
+                                    : 'bg-gray-800 text-indigo-400 hover:bg-gray-700 focus-visible:outline-none',
+                                'mt-8 block rounded-lg px-4 py-3 text-center text-sm font-bold transition transform hover:scale-105 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 sm:mt-10'
                             )}
                         >
-                            Get started today
+                            Join Waitlist
                         </a>
                     </div>
                 ))}

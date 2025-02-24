@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import { CtaButton } from "./buttons/CtaButton";
-import { GetStartedButton } from "./buttons/GetStartedButton";
+import { CtaBtn } from "./buttons/CtaBtn";
+import { TryDemoBtn } from "./buttons/TryDemoBtn";
 import Navbar from "./Navbar";
 
 export default function Header() {
@@ -9,9 +9,9 @@ export default function Header() {
             <div className="text-xl font-bold">MyAIBrand</div>
             <Navbar />
             <div className="space-x-4 hidden md:block">
-                <CtaButton>Book a call</CtaButton>
+                <CtaBtn>Book a call</CtaBtn>
                 <Link to="/generator">
-                    <GetStartedButton>Get started</GetStartedButton>
+                    <TryDemoBtn>Try Demo</TryDemoBtn>
                 </Link>
             </div>
         </header>

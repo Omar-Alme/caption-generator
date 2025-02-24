@@ -1,16 +1,17 @@
 import styled from "styled-components";
 
-export const GetStartedButton = styled.button`
-    background-color: #000000; 
-    color: #ffffff;
+
+export const CtaBtn = styled.button`
+    background-color: #ffffff;
+    color: #000000;
     padding: 0.45rem 1rem;
-    border: white 1px solid;
+    border: none;
     border-radius: 0.375rem;
     font-weight: 600;
     cursor: pointer;
     transition: background-color 0.3s;
 
     &:hover {
-        background-color: #323232;
+        background-color:rgb(223, 227, 236);
     }
 `;

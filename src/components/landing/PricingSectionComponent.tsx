@@ -68,17 +68,12 @@ export default function PricingSectionComponent() {
             <p className="mx-auto mt-6 max-w-2xl text-center text-lg font-medium text-gray-400 sm:text-xl">
                 Select a plan that scales your content creation with AI-powered caption generation.
             </p>
-            <div className="mx-auto mt-16 grid max-w-lg grid-cols-1 items-center gap-y-6 sm:mt-20 sm:gap-y-0 lg:mx-0 lg:max-w-4xl lg:grid-cols-3">
-                {tiers.map((tier, tierIdx) => (
+            <div className="mx-auto mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:max-w-7xl">
+                {tiers.map((tier) => (
                     <div
                         key={tier.id}
                         className={classNames(
-                            tier.featured ? 'relative bg-gray-900 shadow-2xl' : 'bg-gray-800/60 sm:mx-8 lg:mx-0',
-                            tier.featured
-                                ? ''
-                                : tierIdx === 0
-                                    ? 'rounded-t-3xl sm:rounded-b-none lg:rounded-tr-none lg:rounded-bl-3xl'
-                                    : 'sm:rounded-t-none lg:rounded-tr-3xl lg:rounded-bl-none',
+                            tier.featured ? 'relative bg-gray-900 shadow-2xl' : 'bg-gray-800/60',
                             'rounded-3xl p-8 ring-1 ring-gray-900/10 sm:p-10'
                         )}
                     >
@@ -129,7 +124,7 @@ export default function PricingSectionComponent() {
                                 'mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 sm:mt-10'
                             )}
                         >
-                            Join Waitlist
+                            Get started today
                         </a>
                     </div>
                 ))}

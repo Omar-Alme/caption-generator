@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function HeroSectionComponent() {
     return (
         <div className="relative isolate px-6 pt-14 lg:px-8 bg-black text-white">
@@ -34,11 +36,11 @@ export default function HeroSectionComponent() {
                 {/* Main heading + paragraph */}
                 <div className="text-center">
                     <h1 className="text-5xl font-bold tracking-tight text-gray-100 sm:text-7xl">
-                        Data to enrich your online business
+                        AI Powered Caption Generator
                     </h1>
                     <p className="mt-6 text-lg leading-8 text-gray-300">
-                        Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat
-                        commodo. Elit sunt amet fugiat veniam occaecat.
+                        Transform your social media presence with our intelligent caption generator.
+                        Create compelling, on-brand captions in seconds and engage your audience like never before.
                     </p>
 
                     {/* CTA Buttons */}
@@ -52,9 +54,9 @@ export default function HeroSectionComponent() {
                         >
                             Join Waitlist
                         </a>
-                        <a href="#" className="text-sm font-semibold leading-6 text-gray-100">
+                        <Link to="/generator" className="text-sm font-semibold leading-6 text-gray-100">
                             Try Demo <span aria-hidden="true">→</span>
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>

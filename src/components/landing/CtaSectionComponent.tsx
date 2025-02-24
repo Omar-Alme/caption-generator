@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function CtaSectionComponent() {
     const [email, setEmail] = useState('');
@@ -45,11 +46,12 @@ export default function CtaSectionComponent() {
                         >
                             Join Waitlist
                         </button>
-                        <button
+                        <Link
+                            to="/generator"
                             className="bg-black cursor-pointer border border-gray-600 text-white px-6 py-3 rounded-lg font-bold shadow-lg transition transform hover:bg-gray-700 hover:scale-105 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-gray-600"
                         >
                             Try Demo
-                        </button>
+                        </Link>
                     </div>
                 )}
                 {error && <p className="mt-4 text-sm text-red-500">{error}</p>}

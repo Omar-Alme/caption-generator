@@ -1,15 +1,18 @@
+import { useState } from "react";
+import { createChatCompletion } from "../api/aiService";
 import CaptionList from "../components/chat/CaptionsList";
 import ChatBubble from "../components/chat/ChatBubble";
 
 export default function CaptionGenerator() {
+    const [prompt, setPrompt] = useState("");
+    const [captions, setCaptions] = useState<string[]>([]);
 
-    const demoCaptions = [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    ];
+    const handleGenerateCaption = async () => {
+        if (!prompt) return;
+
+        const generatedCaptions = await createChatCompletion(prompt);
+        setCaptions(generatedCaptions);
+    };
 
     return (
         <div className="flex h-screen bg-gray-50 text-gray-800">
@@ -24,9 +27,13 @@ export default function CaptionGenerator() {
                     <h1 className="text-2xl font-semibold">Hi, I'm MyAIBrand.</h1>
                     <p className="text-gray-500">Write me a descriptive Prompt and I'll generate a caption</p>
 
-                    <ChatBubble />
+                    <ChatBubble 
+                        prompt={prompt} 
+                        setPrompt={setPrompt} 
+                        onGenerate={handleGenerateCaption} />
 
-                    <CaptionList captions={demoCaptions} />
+
+                    <CaptionList captions={captions} />
                 </div>
 
                 {/* Footer note */}

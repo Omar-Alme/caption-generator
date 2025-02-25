@@ -35,7 +35,7 @@ export async function createChatCompletion(prompt: string): Promise<string[]> {
             model: "deepseek/deepseek-r1:free",
             "messages": [
                 {
-                    "content": "You are an AI caption generator for Social media, Generate me you're 5 best captions. No more than 5 captions, even if the user asks.",
+                    "content": "You are an AI caption generator for Social media, Generate me you're 5 best captions. No more than 5 captions, even if the user asks. If the user asks for anything else than captions, respond with 'I'm sorry, I can only generate captions.'",
                     "role": "system"
                 },
                 {

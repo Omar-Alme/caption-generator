@@ -10,7 +10,7 @@ export default function ChatBubble({ prompt, setPrompt, onGenerate }: ChatBubble
             <input
                 type="text"
                 className="flex-1 bg-transparent focus:outline-none text-gray-700 placeholder-gray-400"
-                placeholder="Message MyAIbrand"
+                placeholder="Message Captivate"
                 value={prompt}
                 onChange={(e) => setPrompt(e.target.value)}
                 onKeyDown={(e) => e.key === "Enter" && onGenerate()}

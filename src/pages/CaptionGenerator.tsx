@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { createChatCompletion } from "../api/aiService";
+import logo from "../assets/logo-purple.png";
 import CaptionList from "../components/chat/CaptionsList";
 import ChatBubble from "../components/chat/ChatBubble";
 
@@ -19,12 +20,12 @@ export default function CaptionGenerator() {
             <main className="flex-1 flex flex-col items-center justify-center px-4">
                 <div className="max-w-md w-full text-center">
                     <img
-                        src="https://via.placeholder.com/64x64.png"
+                        src={logo}
                         alt="MyAiBrand Logo"
                         className="mx-auto h-16 w-16 mb-4 rounded-full"
                     />
 
-                    <h1 className="text-2xl font-semibold">Hi, I'm MyAIBrand.</h1>
+                    <h1 className="text-2xl font-semibold">Hi, I'm Captivate</h1>
                     <p className="text-gray-500">Write me a descriptive Prompt and I'll generate a caption</p>
 
                     <ChatBubble 

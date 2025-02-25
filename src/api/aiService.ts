@@ -3,12 +3,15 @@ import { axiosApi } from "./axiosApi";
 //create-chat-completion endpoint.
 interface DeepSeekChatRequest {
     model: string;
+    method: string;
     messages: {
         role: "user" | "assistant" | "system";
         content: string;
     }[];
     temperature?: number;
-    max_tokens?: number;
+    top_p?: number;
+    repetition_penalty?: number;
+    // max_tokens?: number;
 }
 
 interface DeepSeekChatResponse {
@@ -28,7 +31,8 @@ interface DeepSeekChatResponse {
 export async function createChatCompletion(prompt: string): Promise<string[]> {
     try {
         const requestBody: DeepSeekChatRequest = {
-            model: "deepseek-chat",
+            method: "POST",
+            model: "deepseek/deepseek-r1:free",
             "messages": [
                 {
                     "content": "You are an AI caption generator for Social media, Generate me you're 5 best captions.",
@@ -39,17 +43,19 @@ export async function createChatCompletion(prompt: string): Promise<string[]> {
                     "role": "user"
                 }
             ],
-            temperature: 0.7,
-            max_tokens: 100,
+            temperature: 0.85,
+            repetition_penalty: 1,
+            top_p: 1,
         };
 
         // API KEY
-        const apiKey = import.meta.env.VITE_DEEPSEEK_API_KEY;
+        // const apiKey = import.meta.env.VITE_DEEPSEEK_API_KEY;
+        const apiKey = import.meta.env.VITE_OPENROUTER_API_KEY;
         console.log('API KEY', apiKey);
         console.log(import.meta.env);
 
         const response = await axiosApi.post<DeepSeekChatResponse>(
-            "/v1/chat/completions",
+            "/chat/completions",
             requestBody,
             {
                 headers: {

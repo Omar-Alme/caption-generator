@@ -1,15 +1,16 @@
 // src/components/Sidebar.tsx
 import { ChatBubbleLeftRightIcon, StarIcon } from '@heroicons/react/24/outline';
 import { NavLink } from 'react-router-dom';
+import logo from '../../assets/logo-purple.png';
 
 export default function Sidebar() {
     return (
         <aside className="w-16 bg-white border-r border-gray-200 flex flex-col items-center py-4">
             <div className="mb-8">
                 <img
-                    src="https://randomuser.me/api/portraits/lego/2.jpg"
+                    src={logo}
                     alt="User Avatar"
-                    className="w-10 h-10 rounded-full"
+                    className="w-12 h-12 rounded-full"
                 />
             </div>
             {/* Nav links */}

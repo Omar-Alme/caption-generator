@@ -71,11 +71,16 @@ export async function createChatCompletion(prompt: string): Promise<string[]> {
 
         const generatedText = data.choices[0].message.content.trim();
 
-        return [generatedText];
+        const lines = generatedText
+            .split("\n")
+            .map((line) => line.replace(/^\d+\.\s*/, "").trim())
+            .filter(Boolean);
+
+        return lines.length ? lines : ["No captions generated."];
+        
     } catch (error) {
         console.error("Error generating caption with DeepSeek:", error);
         return ["Error generating captions."];
     }
 }
 
-// https://api-docs.deepseek.com/api/create-chat-completion

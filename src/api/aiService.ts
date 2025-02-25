@@ -73,7 +73,7 @@ export async function createChatCompletion(prompt: string): Promise<string[]> {
 
         const lines = generatedText
             .split("\n")
-            .map((line) => line.replace(/^\d+\.\s*/, "").trim())
+            .map((line) => line.replace(/^\d+\.\s+/, "").replace(/"/g, "").trim())
             .filter(Boolean);
 
         return lines.length ? lines : ["No captions generated."];

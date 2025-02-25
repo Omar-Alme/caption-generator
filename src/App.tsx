@@ -5,12 +5,14 @@ import CaptionGenerator from "./pages/CaptionGenerator"
 import FavoritesPage from "./pages/FavoritesPage"
 import LandingPage from "./pages/LandingPage"
 import NotFound from "./pages/NotFound"
+import { FavoritesProvider } from "./providers/FavoriteCaptionProvider"
 
 function App() {
 
 
   return (
-    <BrowserRouter>
+    <FavoritesProvider>
+      <BrowserRouter>
       <Routes>
         {/* Landing Page Layout */}
         <Route element={<LandingLayout />}>
@@ -28,6 +30,8 @@ function App() {
 
       </Routes>
     </BrowserRouter>
+    </FavoritesProvider>
+    
   )
 }
 

@@ -29,7 +29,16 @@ export async function createChatCompletion(prompt: string): Promise<string[]> {
     try {
         const requestBody: DeepSeekChatRequest = {
             model: "deepseek-chat",
-            messages: [{ role: "user", content: prompt }],
+            "messages": [
+                {
+                    "content": "You are an AI caption generator for Social media, Generate me you're 5 best captions.",
+                    "role": "system"
+                },
+                {
+                    "content": prompt,
+                    "role": "user"
+                }
+            ],
             temperature: 0.7,
             max_tokens: 100,
         };

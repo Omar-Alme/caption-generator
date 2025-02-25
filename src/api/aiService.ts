@@ -44,7 +44,9 @@ export async function createChatCompletion(prompt: string): Promise<string[]> {
         };
 
         // API KEY
-        const apiKey = import.meta.env.DEEPSEEK_API_KEY;
+        const apiKey = import.meta.env.VITE_DEEPSEEK_API_KEY;
+        console.log('API KEY', apiKey);
+        console.log(import.meta.env);
 
         const response = await axiosApi.post<DeepSeekChatResponse>(
             "/v1/chat/completions",

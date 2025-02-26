@@ -7,12 +7,15 @@ import ChatBubble from "../components/chat/ChatBubble";
 export default function CaptionGenerator() {
     const [prompt, setPrompt] = useState("");
     const [captions, setCaptions] = useState<string[]>([]);
+    const [loading, setLoading] = useState(false);
 
     const handleGenerateCaption = async () => {
         if (!prompt) return;
 
+        setLoading(true);
         const generatedCaptions = await createChatCompletion(prompt);
         setCaptions(generatedCaptions);
+        setLoading(false);
     };
 
     return (
@@ -33,7 +36,12 @@ export default function CaptionGenerator() {
                         setPrompt={setPrompt} 
                         onGenerate={handleGenerateCaption} />
 
+                    {/* Loading state */}
+                    {loading && <p className="text-gray-400 mt-4 font-semibold">
+                        Generating captions...
+                        </p>}
 
+                    {/* Captions list */}
                     <CaptionList captions={captions} />
                 </div>
 

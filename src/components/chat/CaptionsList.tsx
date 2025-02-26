@@ -11,7 +11,7 @@ export default function CaptionList({ captions }: CaptionListProps) {
     return (
         <div className="space-y-4 mt-8">
             {captions.map((caption, index) => {
-                const isDisabled = caption === "No captions generated.";
+                const isDisabled = caption === "No captions generated." || caption === "I'm sorry, I can only generate captions.";
 
                 const isFavorited = favorites.includes(caption);
 

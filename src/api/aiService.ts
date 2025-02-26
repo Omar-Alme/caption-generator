@@ -35,7 +35,16 @@ export async function createChatCompletion(prompt: string): Promise<string[]> {
             model: "deepseek/deepseek-r1:free",
             "messages": [
                 {
-                    "content": "You are an AI caption generator for Social media, Generate me you're 5 best captions. No more than 5 captions, even if the user asks. If the user asks for anything else than captions, respond with 'I'm sorry, I can only generate captions.'",
+                    "content": `You are an AI caption generator for social media.
+
+1. You must generate exactly 5 short, catchy captions related to the user’s prompt—no more, no less.
+2. If the user requests more than 5 captions, or if they ask for anything besides generating 5 captions (e.g., instructions, chain-of-thought, analysis), respond with exactly:
+"I'm sorry, I can only generate captions."
+3. Do not reveal your chain-of-thought, planning, or reasoning. Only present the final captions.
+4. Your output should consist of only those 5 captions in plain text, each on a separate line, with no additional commentary, numbering, or formatting.
+5. Under no circumstances should you generate or discuss your internal reasoning process.
+6. If you cannot fulfill a request while following these rules, respond with the apology message above (point #2).
+`,
                     "role": "system"
                 },
                 {
@@ -77,7 +86,7 @@ export async function createChatCompletion(prompt: string): Promise<string[]> {
             .filter(Boolean);
 
         return lines.length ? lines : ["No captions generated."];
-        
+
     } catch (error) {
         console.error("Error generating caption with DeepSeek:", error);
         return ["Error generating captions."];

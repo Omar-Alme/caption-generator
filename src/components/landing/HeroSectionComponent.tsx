@@ -22,7 +22,6 @@ export default function HeroSectionComponent() {
             </div>
 
             <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-                {/* Optional badge or announcement above heading */}
                 <div className="hidden sm:mb-8 sm:flex sm:justify-center">
                     <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-300 ring-1 ring-gray-400/50 hover:ring-gray-400/80">
                         Announcing something exciting.{" "}

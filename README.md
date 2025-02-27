@@ -18,7 +18,7 @@ Captivate is a React + Vite application that generates up to five short, catchy 
 The project uses **Tailwind CSS** for styling, **React Router** for navigation, and **OpenRouter** for the AI endpoint.
 
 ## Features
-1. **Responsive Landing Page**: A modern one-page introduction with a dark or light theme.
+1. **Responsive Landing Page**: A modern one-page introduction with a dark theme.
 2. **AI Chat Layout**: A minimal chat input (ChatBubble) to enter prompts, returning multiple lines of captions.
 3. **Favorites System**: Click a star icon to save captions.
 4. **Favorites Page**: View and remove favorited captions.

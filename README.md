@@ -1,50 +1,73 @@
-# React + TypeScript + Vite
+# Captivate: AI Social Media Caption Generator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Deployed App**: [Captivate Demo](https://caption-generator-2bjwemfqx-omar-almes-projects.vercel.app)
 
-Currently, two official plugins are available:
+![Captivate Demo]("../../src/assets/documentation/app.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Captivate Demo]("../../src/assets/documentation/chat.png)
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Configure the top-level `parserOptions` property like this:
+## Project Description
+Captivate is a React + Vite application that generates up to five short, catchy social media captions using an AI-powered endpoint. Users can:
+- Write a descriptive prompt.
+- Receive exactly five AI-generated captions.
+- “Favorite” any caption for later reference.
+- View and remove favorited captions in a separate Favorites page.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+The project uses **Tailwind CSS** for styling, **React Router** for navigation, and **OpenRouter** for the AI endpoint.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Features
+1. **Responsive Landing Page**: A modern one-page introduction with a dark or light theme.
+2. **AI Chat Layout**: A minimal chat input (ChatBubble) to enter prompts, returning multiple lines of captions.
+3. **Favorites System**: Click a star icon to save captions.
+4. **Favorites Page**: View and remove favorited captions.
+5. **Integration with OpenRouter**: A free-tier AI endpoint that returns exactly five captions.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Installation & Setup
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/your-username/caption-generator.git
+   cd caption-generator
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+
+3. **Generate a secret key from this link**:
+   ```bash
+   https://openrouter.ai/deepseek/deepseek-r1:free/api
+
+4. **Create a .env file in project root and add:**:
+   ```bash
+   VITE_OPENROUTER_API_KEY=your-openrouter-api-key
+   ```
+
+5. **Start the development server**:
+   ```bash
+   npm run dev
+   ```
+
+### G-Krav:
+
+- **`[✔️]`**: Projektet innehåller och använder minst 6 stycken komponenter varav minst 2 stycken är “statefulla"-komponenter.
+
+- **`[✔️]`**: React Router har använts för att dynamiskt uppdatera URL’en.
+
+- **`[✔️]`**: Git & GitHub
+
+- **`[✔️]`**: README-fil.
+
+- **`[✔️]`**: Presentation.
+
+
+### VG-Krav:
+
+- **`[✔️]`**: CSS i JS: Two Styled Components
+
+- **`[✔️]`**: OpenRouter API.
+
+
+## Enjoy Captivate!
+Feel Feel free to open issues or PRs for enhancements, bug fixes, or AI improvements. Feedback is always welcome.

@@ -4,22 +4,22 @@ export default function FavoritesPage() {
     const { favorites, removeFavorite } = useFavorites();
 
     return (
-        <div className="p-6 flex-1 flex flex-col">
-            <h1 className="text-2xl font-bold mb-4">Your Favorites</h1>
+        <div className="p-6 flex-1 flex flex-col bg-gray-50">
+      <h1 className="text-2xl font-bold mb-6 text-gray-800">Your Favorites</h1>
 
             {favorites.length === 0 ? (
                 <p className="text-gray-500">No favorites yet.</p>
             ) : (
-                <ul className="space-y-2">
+                <ul className="space-y-4">
                     {favorites.map((caption, i) => (
                         <li
                             key={i}
-                            className="flex items-center justify-between p-3 border border-gray-300 rounded"
-                        >
-                            <span>{caption}</span>
+                            className="flex items-center justify-between p-5 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition duration-200"
+                            >
+                            <span className="text-gray-800">{caption}</span>
                             <button
                                 onClick={() => removeFavorite(caption)}
-                                className="text-red-500 hover:text-red-600 cursor-pointer"
+                                className="text-red-500 hover:text-red-600 transition cursor-pointer"
                             >
                                 {/* Remove icon */}
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">

@@ -1,6 +1,6 @@
 # Captivate: AI Social Media Caption Generator
 
-**Deployed App**: [Captivate Demo](https://caption-generator-2bjwemfqx-omar-almes-projects.vercel.app)
+**Deployed App**: [Captivate Demo](https://caption-generator-xi.vercel.app/)
 
 ![Captivate Demo]("../../src/assets/documentation/app.png)
 

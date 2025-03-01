@@ -49,25 +49,6 @@ The project uses **Tailwind CSS** for styling, **React Router** for navigation, 
    npm run dev
    ```
 
-### G-Krav:
-
-- **`[✔️]`**: Projektet innehåller och använder minst 6 stycken komponenter varav minst 2 stycken är “statefulla"-komponenter.
-
-- **`[✔️]`**: React Router har använts för att dynamiskt uppdatera URL’en.
-
-- **`[✔️]`**: Git & GitHub
-
-- **`[✔️]`**: README-fil.
-
-- **`[✔️]`**: Presentation.
-
-
-### VG-Krav:
-
-- **`[✔️]`**: CSS i JS: Two Styled Components
-
-- **`[✔️]`**: OpenRouter API.
-
 
 ## Enjoy Captivate!
 Feel Feel free to open issues or PRs for enhancements, bug fixes, or AI improvements. Feedback is always welcome.
